@@ -2,24 +2,25 @@
 {
     private static void Main(string[] args)
     {
-        int num1=Convert.ToInt32(Console.ReadLine());
-        int num2= Convert.ToInt32(Console.ReadLine());
-        int sum;
-        for(int i=num1;i<=num2;i++)
+        Console.WriteLine("enter n1 && n2");
+        int n1=int.Parse(Console.ReadLine());
+        int n2 = int.Parse(Console.ReadLine());
+        for(n1=n1;n1<=n2;n1++)
         {
-            int j = 1;
-            sum = 0;
-            while(j<i)
+            int max = 1;
+            for(int i=2;i<n1;i++)
             {
-                if(i%j==0)
+                if(n1%i==0)
                 {
-                    sum = sum + j;
+                    max = 0;
+                    break;
                 }
-                j++;
-
             }
-            if(sum==i)
-                Console.WriteLine("{0}",i);
+
+            if (max != 0)
+
+                Console.WriteLine(n1+"  is prime ");
         }
+
     }
 }
